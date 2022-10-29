@@ -1,0 +1,380 @@
+/* reset code and common code starts here */
+* {
+    
+ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    outline: 0;
+    font-weight: 500;
+}
+html { 
+    background-color: #fafafa;
+    font-size: 63%;
+    scroll-behavior: smooth;
+    font-family: 'Roboto Serif', serif;
+    
+  
+}
+body {
+    background-color:blanchedalmond;
+    width: 120rem;
+    max-width: 100%;
+    margin: auto;
+    box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4 , -0.1rem 0rem 0.1rem #c4c4c4;
+}
+.text-justify {
+    text-align: justify;
+}
+.text-white {
+    color: #fff;
+}
+.section-heading{
+    font-size: 8rem;
+    text-align: center;
+    font-family: 'Italianno', cursive;
+} 
+.section-center {
+    padding: 5rem 1rem ;
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items : center;
+    justify-content:space-evenly;
+}
+.btn {
+    background-color: rgb(230, 159, 8);
+    border: none;
+    border-radius: 0.6rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem #222;
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 1rem 0rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+/* reset code and common code ends here  */
+
+/* header starts here  */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkorchid;
+    color: white;
+    padding: 2rem 1rem ;
+    position: sticky ;
+    top: 0;
+    z-index: 10;
+    min-height: 5vh;
+}
+.logo-figure {
+    border: 1px solid #fafafa
+}
+.logo {
+    font-size: 4rem;
+}
+nav li {
+    display: inline-block;
+    margin-right: 2rem;
+    padding: 1rem;
+    transition: all 0.4s;
+}
+nav li:last-child {
+    margin-right : 0;
+}
+nav li:hover {
+    background-color : green;
+    border-radius: 0.8rem;
+}
+.nav-link {
+    font-size: 2rem;
+    color:#fafafa;
+    cursor: pointer;
+}
+/* header ends here  */
+
+/* blog-posts starts here  */
+
+.blog-posts-heading {
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    font-family: 'Pacifico', cursive
+
+   
+}
+.blog-img {
+    width:15rem;
+    height: 15rem;
+}
+.blog-post{
+    width: 70%;
+    display: flex;
+    margin: 1rem 0;
+    box-shadow: 0.1rem 0.1rem 0.1rem #222 , -0.1rem 0 0.1rem #222;
+    transition: transform 0.4s;
+}
+.blog-post:hover {
+    transform: scale(1.1);
+}
+.blog-post-aside {
+    flex: 1;
+}
+.blog-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+    margin-left: 2rem;
+}
+.blog-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.blog-sub-heading {
+    font-size: 2rem;
+    margin-bottom : 1rem; 
+}
+.blog-description {
+    font-size: 1.6rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+.blog-btn {
+    width: 30%;
+}
+/* blog-posts ends here  */
+
+
+
+/* myworld-about start here  */
+#myworld-about {
+    min-height: 50vh;
+    padding : 5rem 1rem ;
+    background-color: #4c4c4c;
+}
+.card-container {
+    display: flex;
+    align-items: center;
+}
+.card {
+    flex: 1;
+    border-radius: 0.6;
+    background-color: skyblue;
+    color: black;
+    padding: 3rem 1rem ;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card-header {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.card-description {
+    padding: 0.6rem;
+    text-align: justify;
+    font-size: 1.6rem;
+    margin-bottom: 5rem;
+}
+.des {
+    font-size: 1.91rem;
+}
+.achivements {
+    list-style-type: square;
+    margin: .8rem;
+    padding: 0.1rem;
+    font-size: 1.6rem;
+
+}
+.skils-container {
+    padding-right : 2rem;
+}
+.skills-container li {
+    font-size: small;
+    font-weight: bolder;
+    margin: 1.3rem 5rem;
+    position: relative;
+    text-transform: uppercase;
+}
+.skills-container li::before {
+    content: '' ;
+    position: absolute;
+    top: calc(100% + 5%);
+    left: 0;
+    width: 100%; height: .6rem;
+    background-color: rgb(86, 86, 153, .5);
+    border-radius: 5rem;
+}
+.skills-container li::after {
+    content: '' ;
+    position: absolute;
+    top: calc(100% + 5%);
+    left: 0;
+    width: 0%; height: .6rem;
+    background-color: rgb(86, 86, 153, 1);
+    border-radius: 5rem;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite  ;
+}
+.skills-container li.html::after{
+    animation-name: html;
+}
+@keyframes html {
+    to{
+        width: 90%;
+    }
+}
+.skills-container li.c::after{
+    animation-name: c ;
+}
+@keyframes c {
+    to{
+        width: 90%;
+    }
+}
+.skills-container li.bangla::after{
+    animation-name: bangla;
+}
+@keyframes bangla {
+    to{
+        width: 99%;
+    }
+}
+.skills-container li.c::after{
+    animation-name: c ;
+}
+@keyframes c {
+    to{
+        width: 90%;
+    }
+}
+.skills-container li.css::after{
+    animation-name: css;
+}
+@keyframes css {
+    to{
+        width: 80%;
+    }
+}
+.skills-container li.js::after{
+    animation-name: js ;
+}
+@keyframes js  {
+    to{
+        width: 30%;
+    }
+}
+.skills-container li.gd::after{
+    animation-name: gd;
+}
+@keyframes gd {
+    to{
+        width: 85%;
+    }
+}
+.skills-container li.app::after{
+    animation-name: app;
+}
+@keyframes app {
+    to{
+        width:5%;
+    }
+}
+.readmore {
+    font-size: 2rem;
+    font-weight: 2rem;
+    color: aliceblue;
+    margin: 2rem;
+}
+.card-btn {
+    align-self: center;
+    width: 50%;
+}
+.nav-link1 {
+    color: #222;
+}
+.nav-link1:hover {
+    color: red
+}
+/* myworld-about ends here  */
+
+/* footer starts here  */
+footer {
+    background-color: black;
+    padding :1rem ;
+    min-height: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .copyright-text {
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: flex-start;
+ }
+ .footer-icon {
+    font-size: 2.5rem;
+ }
+ footer li:hover {
+    background-color : lightcoral;
+    border-radius: 1rem;
+ }
+
+/* footer ends here  */
+
+
+/* responsive starts  */
+
+@media (max-width: 992px) {
+
+@media (max-width: 768px) {
+    html{
+        font-size: 55.5%;
+    }
+
+.blog-post {
+    flex-direction: column;
+    margin-bottom: 3rem;
+    width: 80%;
+}
+
+}
+@media (max-width: 600px) {
+    html{
+        font-size: 48.5%;
+    }
+}
+#myworld-banner-section {
+    min-height:auto;
+}
+.blog-post {
+
+    width: 90%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+#menubar2 {
+    display: flex;
+    
+}
+}
+
+/* responsive ends  */
